@@ -19,7 +19,7 @@ def main():
 
         results = search_similar_chunks(
             query_embedding=query_embedding,
-            top_k=5,
+            top_k=1,
         )
 
         print("\nTop results:\n")

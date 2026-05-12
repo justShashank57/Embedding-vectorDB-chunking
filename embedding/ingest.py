@@ -3,14 +3,14 @@ from pathlib import Path
 
 from config import settings
 from embedding_service import create_embeddings_batch
-from models import PdfChunk
+from models import PDFChunk
 from vector_db import add_chunks_to_vector_db
 
 
 BATCH_SIZE = 50
 
 
-def load_chunks() -> list[PdfChunk]:
+def load_chunks() -> list[PDFChunk]:
     chunks_path = Path(settings.CHUNKS_FILE)
 
     if not chunks_path.exists():
@@ -21,10 +21,10 @@ def load_chunks() -> list[PdfChunk]:
     with open(chunks_path, "r", encoding="utf-8") as file:
         raw_chunks = json.load(file)
 
-    return [PdfChunk.model_validate(chunk) for chunk in raw_chunks]
+    return [PDFChunk.model_validate(chunk) for chunk in raw_chunks]
 
 
-def batch_items(items: list[PdfChunk], batch_size: int):
+def batch_items(items: list[PDFChunk], batch_size: int):
     for index in range(0, len(items), batch_size):
         yield items[index:index + batch_size]
 
