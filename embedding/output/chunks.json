@@ -1,0 +1,37 @@
+[
+  {
+    "id": "AI_Roadmap_Detailed.pdf_page1_chunk0",
+    "source": "AI_Roadmap_Detailed.pdf",
+    "page": 1,
+    "chunk_index": 0,
+    "text": "■ 2-MONTH AGGRESSIVE ROADMAP WEEK 1 — Python for AI (Hands-on only) Goal: Become comfortable writing clean, async, production-style Python. Focus Async/await File handling (large text files) Logging Error handling + retries Modular project structure Generators (important for streaming LLM responses) Daily Tasks Day 1 Write async script → call 5 public APIs concurrently Implement retries with exponential backoff manually Day 2 Build a mini log utility (custom logger with rotating files) Day 3 Process a 200MB text file (read in chunks, clean, count words) Day 4 Write a CLI tool: “summarize my file” Day 5–6 Project: ■ Project #1: Async Web Crawler Crawl 20 URLs concurrently Extract text Save JSON chunks Add logs + retries WEEK 2 — LLM Foundations (Pure coding) Goal: Learn to use LLMs professionally, not toy-level. Focus"
+  },
+  {
+    "id": "AI_Roadmap_Detailed.pdf_page2_chunk0",
+    "source": "AI_Roadmap_Detailed.pdf",
+    "page": 2,
+    "chunk_index": 0,
+    "text": "ChatCompletions Prompts JSON outputs Function calling Streaming responses Rate limits Daily Tasks Day 1: CLI streaming assistant Day 2: Structured JSON generator Day 3: Tool-calling agent Day 4–5 Project: ■ Project #2: Resume Analyzer API WEEK 3 — Embeddings + VectorDB + Chunking Goal: Understand retrieval + vector search deeply. Focus Chunking Token splits Overlap tuning Embeddings Vector DBs Similarity search Metadata filters Tasks Day 1: Chunk PDFs → JSON Day 2: Embeddings + ChromaDB Day 3: Metadata filtering Day 4–5 Project: ■ Project #3: Semantic Search Engine WEEK 4 — RAG Goal: Build real RAG systems."
+  },
+  {
+    "id": "AI_Roadmap_Detailed.pdf_page3_chunk0",
+    "source": "AI_Roadmap_Detailed.pdf",
+    "page": 3,
+    "chunk_index": 0,
+    "text": "Focus Query rewriting Retrieve → rerank → answer Context injection Citations RAG eval Tasks Day 1: Basic RAG Day 2: Query rewriting Day 3: Reranking Day 4–6 Project: ■ Project #4: Multi-PDF Chatbot WEEK 5 — FastAPI Backend Goal: Convert RAG into API. Focus Routers Dependencies Pydantic JWT WebSockets Middleware Tasks Day 1: CRUD API Day 2: RAG service class Day 3: Routes (upload/embed/search/chat) Day 4–6 Project: ■ Project #5: Full RAG API Service WEEK 6 — Docker + Cloud Goal: Deploy like real engineer."
+  },
+  {
+    "id": "AI_Roadmap_Detailed.pdf_page4_chunk0",
+    "source": "AI_Roadmap_Detailed.pdf",
+    "page": 4,
+    "chunk_index": 0,
+    "text": "Focus Docker Compose AWS EC2/S3/IAM Nginx Tasks Day 1: Dockerfile Day 2: Compose Day 3: Deploy EC2 + Nginx Day 4–5 Project: ■ Project #6: Cloud RAG System WEEK 7 — Web UI Goal: Build a UI. Focus Next.js Streaming UI Uploads Auth tokens Project ■ Project #7: Chat-with-PDFs Web App WEEK 8 — Final Capstone ■ AI Knowledge Base System (Production) Login PDF upload Chunk + embed Vector DB Chat UI Streaming"
+  },
+  {
+    "id": "AI_Roadmap_Detailed.pdf_page5_chunk0",
+    "source": "AI_Roadmap_Detailed.pdf",
+    "page": 5,
+    "chunk_index": 0,
+    "text": "Citations History Logs dashboard Token usage stats Cloud deployment Docker Monitoring Outcome After 2 Months You can: Build LLM apps Build RAG systems Deploy FastAPI Use vector DBs Deploy to cloud Build full-stack AI apps"
+  }
+]
