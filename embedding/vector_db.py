@@ -34,12 +34,29 @@ def add_chunks_to_vector_db(
 
 def search_similar_chunks(
     query_embedding: list[float],
-    top_k: int = 5
+    top_k: int = 5,
+    source: str | None = None,
+    page: int | None = None,
 ) -> list[SearchResult]:
+    where_filter = {}
+
+    if source and page:
+        where_filter = {
+            "$and": [
+                {"source": {"$eq": source}},
+                {"page": {"$eq": page}},
+            ]
+        }
+    elif source:
+        where_filter = {"source": {"$eq": source}}
+    elif page:
+        where_filter = {"page": {"$eq": page}}
+
     results = collection.query(
         query_embeddings=[query_embedding],
         n_results=top_k,
-        include=["metadatas", "documents", "distances"]
+        where=where_filter if where_filter else None,
+        include=["documents", "metadatas", "distances"],
     )
 
     search_results: list[SearchResult] = []
