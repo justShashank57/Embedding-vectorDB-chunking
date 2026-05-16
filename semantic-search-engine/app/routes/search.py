@@ -4,9 +4,10 @@ from app.services.vector_db import search_chunks
 from app.services.query_cleaner import clean_query
 from fastapi import APIRouter, HTTPException
 
-router = APIRouter(prefix = "/api", tags=["Semantic Search"])
+router = APIRouter(prefix="/api", tags=["Semantic Search"])
 
-router.post("/search", response_model=SearchResponse)
+
+@router.post("/search", response_model=SearchResponse)
 def semantic_search(payload: SearchRequest):
     cleaned_query = clean_query(payload.query)
     
@@ -20,12 +21,12 @@ def semantic_search(payload: SearchRequest):
         top_k=payload.top_k,
         source=payload.source,
         page=payload.page,
-        max_distance=payload.max_distance
+        max_distance=payload.max_distance,
     )
 
     return SearchResponse(
         query=payload.query,
         total_results=len(results),
-        results=results
+        results=results,
     )
 

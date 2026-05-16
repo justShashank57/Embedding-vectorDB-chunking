@@ -2,5 +2,7 @@ pypdf
 pydantic
 chromadb
 openai
+fastapi
+uvicorn[standard]
 pydantic-settings
 python-dotenv
